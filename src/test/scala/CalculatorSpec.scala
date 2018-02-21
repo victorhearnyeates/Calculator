@@ -1,7 +1,8 @@
-import org.scalatest.{FlatSpec, Matchers}
+import org.scalatest.{FlatSpec, Matchers, PrivateMethodTester}
 
 class CalculatorSpec extends FlatSpec with Matchers {
   import Calculator.calculate
+  import CalculatorInstances.stringCalculator
 
   "calculator" should "take in '3-2' and return 1" in {
     val output = calculate("3-2")
